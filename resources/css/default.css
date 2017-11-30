@@ -1,0 +1,15 @@
+html, body {
+    background-color: #000;
+    color: #0f0;
+    height: 100%;
+    margin: 0;
+}
+
+a:link, a:visited {
+    color: #0f0;
+}
+
+.finger {
+    position: absolute;
+    background-color: #0f0;
+}
