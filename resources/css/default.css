@@ -12,4 +12,6 @@ a:link, a:visited {
 .finger {
     position: absolute;
     background-color: #0f0;
+    color: #000;
+    text-align: center;
 }
