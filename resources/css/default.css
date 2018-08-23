@@ -1,5 +1,13 @@
+:root {
+    --color-bg-start: #000;
+    --color-bg-end: #0f0;
+    --default-timeout: 3s;
+    --reset-time: 1s;
+}
+
 html, body {
-    background-color: #000;
+    transition: var(--reset-time);
+    background-color: var(--color-bg-start);
     color: #0f0;
     height: 100%;
     margin: 0;
@@ -12,4 +20,19 @@ a:link, a:visited {
 .finger {
     position: absolute;
     background-color: #0f0;
+}
+
+.not-chosen {
+    transition: var(--reset-time);
+    background-color: #f00;
+}
+
+.timer-running {
+    transition: var(--default-timeout);
+    background-color: var(--color-bg-end);
+}
+
+.timer-reset {
+    transition: 0s;
+    background-color: var(--color-bg-start);
 }

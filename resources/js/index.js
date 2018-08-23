@@ -72,21 +72,27 @@ function handleChoose() {
     for (var i = 0; i < ongoingTouches.length; i++) {
         if (i != theChosenFinger) {
             var elem = document.getElementById('touch' + ongoingTouches[i].identifier);
-            elem.style.backgroundColor = "#f00";
+            elem.classList.add('not-chosen');
         }
     }
+
+    document.body.classList.remove('timer-running');
 }
 
 
 //Updates the timer when the number of fingers changes
 function updateTimer() {
-    //If there is now more than one finger, restart the timer
     if (ongoingTouches.length > 1) {
         window.clearTimeout(timer);
         timer = window.setTimeout(handleChoose, DEFAULT_TIMEOUT);
-    //Otherwise stop the timer
+        
+        document.body.classList.add('timer-reset');
+        document.body.offsetWidth; //force redraw
+        document.body.classList.remove('timer-reset');
+        document.body.classList.add('timer-running');
     } else {
         window.clearTimeout(timer);
+        document.body.classList.remove('timer-running');
     }
 }
 
