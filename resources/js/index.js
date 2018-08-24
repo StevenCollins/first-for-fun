@@ -64,7 +64,11 @@ function handleEnd(event) {
 
 //Chooses a finger
 function handleChoose() {
-    ga('send', 'event', 'choose', 'finger', '1');
+    gtag('event', 'choose', {
+        event_category: 'interactions',
+        event_label: 'finger',
+        value: '1'
+    });
 
     var theChosenFinger = Math.floor(Math.random() * ongoingTouches.length);
 
