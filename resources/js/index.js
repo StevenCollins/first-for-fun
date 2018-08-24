@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false);
 
 //Global variables
-var DEFAULT_SIZE = 100;
+var DEFAULT_SIZE = 125;
 var DEFAULT_TIMEOUT = 3000;
 var ongoingTouches = new Array;
 var timer;

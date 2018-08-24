@@ -23,6 +23,8 @@ a:link, a:visited {
 .finger {
     position: absolute;
     background-color: #0f0;
+    
+    animation: breathe 1s infinite alternate;
 }
 
 .not-chosen {
@@ -39,3 +41,12 @@ a:link, a:visited {
     transition: 0s;
     background-color: var(--color-bg-start);
 }
+
+@keyframes breathe {
+    from {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(0.9);
+    }
+  }
