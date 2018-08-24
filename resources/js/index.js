@@ -16,7 +16,6 @@ var timer;
 
 //Adds finger icons
 function handleStart(event) {
-    event.preventDefault();
     var touches = event.changedTouches;
 
     for (var i = 0; i < touches.length; i++) {
@@ -31,7 +30,6 @@ function handleStart(event) {
 
 //Moves finger icons
 function handleMove(event) {
-    event.preventDefault();
     var touches = event.changedTouches;
 
     for (var i = 0; i < touches.length; i++) {
@@ -48,7 +46,6 @@ function handleMove(event) {
 
 //Removes finger icons
 function handleEnd(event) {
-    event.preventDefault();
     var touches = event.changedTouches;
 
     for (var i = 0; i < touches.length; i++) {
@@ -67,6 +64,8 @@ function handleEnd(event) {
 
 //Chooses a finger
 function handleChoose() {
+    ga('send', 'event', 'choose', 'finger', '1');
+
     var theChosenFinger = Math.floor(Math.random() * ongoingTouches.length);
 
     for (var i = 0; i < ongoingTouches.length; i++) {

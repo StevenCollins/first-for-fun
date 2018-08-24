@@ -6,11 +6,14 @@
 }
 
 html, body {
+    overscroll-behavior: none;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    margin: 0;
     transition: var(--reset-time);
     background-color: var(--color-bg-start);
     color: #0f0;
-    height: 100%;
-    margin: 0;
 }
 
 a:link, a:visited {
